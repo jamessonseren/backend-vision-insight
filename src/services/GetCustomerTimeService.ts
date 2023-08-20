@@ -1,7 +1,7 @@
 import { caixa, client } from "../utils/database"
 
 interface CustomerTimeRequest{
-    clientId: number,
+    clientId: string,
     quantityInCart: string
 }
 class GetCustomerTimeService{
@@ -10,9 +10,9 @@ class GetCustomerTimeService{
 
         
         if(findClient){
-            console.log("hora inicio", findClient.horaInicio)
+            console.log("hora inicio", findClient)
 
-            console.log("hora fim", findClient.horaFinal)
+            console.log("hora fim", findClient)
         }
        
     }
