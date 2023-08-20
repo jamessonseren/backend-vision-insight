@@ -1,4 +1,4 @@
-import { caixa, client } from "../utils/database"
+import { caixa, client, fila } from "../utils/database"
 
 class UpdateCustomerSituationService{
     async execute(clientId: string, situacao:string){
@@ -40,9 +40,9 @@ class UpdateCustomerSituationService{
                     getCustomer.position = clientesFila1.length -1;
 
                 }
-
                 
             }
+            
 
             getCustomer.initialTime = new Date() 
                 

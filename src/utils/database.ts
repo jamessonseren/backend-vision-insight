@@ -44,17 +44,17 @@ export let client: ICliente[]= [
         finalTime: finalTime,
         filaId:"fila2"
     },
-    {
-        id:'3',
-        estimatedItems: 15,
-        position: 0,
-        situation: {
-            status: initialSituation
-        },
-        initialTime: initialTime,
-        finalTime: finalTime,
-        filaId: filaId
-    },
+    // {
+    //     id:'3',
+    //     estimatedItems: 15,
+    //     position: 0,
+    //     situation: {
+    //         status: initialSituation
+    //     },
+    //     initialTime: initialTime,
+    //     finalTime: finalTime,
+    //     filaId: filaId
+    // },
     
 ]
 
@@ -68,6 +68,7 @@ const ClientId: string = "";
 
 const estimatedTime: string = ""
 const totalItems: number = 1
+const status: string = "AguardandoCliente"
 
 export let caixa: ICaixa[] = [
     {
@@ -90,18 +91,21 @@ export let fila = [
         idCaixa: "c1",
         estimatedTime:estimatedTime,
         TotalItems: totalItems,
+        status:status 
     },
     {
         id:"fila2",
         idCaixa: "c2",
         estimatedTime:estimatedTime,
         TotalItems: totalItems,
+        status:status 
     },
     {
         id:"fila3",
         idCaixa: "c3",
         estimatedTime:estimatedTime,
         TotalItems: totalItems,
+        status:status 
     },
 ]
 
