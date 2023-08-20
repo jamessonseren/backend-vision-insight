@@ -6,6 +6,7 @@
   "author": "Jamesson Seren de Arruda <jamesson.arruda@sga.pucminas.br>",
   "license": "MIT",
   "scripts": {
+    "start":"node src/server.ts",
     "dev": "ts-node-dev src/server.ts"
   },
   "devDependencies": {
