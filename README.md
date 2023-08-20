@@ -32,7 +32,7 @@ Admin will have total control on the dispensers and will be able to generate fin
 - [x] NodeJs - Backend
 - [x] Express - Framework web
 
-### Dependencies
+### Dependências
 
 1. Express-Async-Errors
 2. Typescript
@@ -40,7 +40,7 @@ Admin will have total control on the dispensers and will be able to generate fin
 
 
 
-## Directories Organization <a name="organization"></a>
+## Organização dos diretórios <a name="organization"></a>
 
 A organização das pastas do projeto foi cuidadosamente planejada para garantir uma estrutura clara e modular. Toda a lógica do sistema está concentrada no diretório "src", onde encontramos três diretórios principais: "Controller" e "Service".
 
