@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const GetCustomerTimeController_1 = require("./controllers/GetCustomerTimeController");
+const UpdateCustomerSituationController_1 = require("./controllers/UpdateCustomerSituationController");
+const ListClientsController_1 = require("./controllers/ListClientsController");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.post("/customer/:clientId", new GetCustomerTimeController_1.GetCustomerTimeController().handle);
+router.put('/customer-status', new UpdateCustomerSituationController_1.UpdateCustomerSituationController().handle);
+router.get('/clients', new ListClientsController_1.ListClientsController().handle);

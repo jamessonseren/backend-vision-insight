@@ -1,13 +1,14 @@
 {
   "name": "backend-vision-insight",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "repository": "https://github.com/jamessonseren/backend-vision-insight.git",
   "author": "Jamesson Seren de Arruda <jamesson.arruda@sga.pucminas.br>",
   "license": "MIT",
   "scripts": {
     "start":"node src/server.ts",
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "build": "rimraf ./build && tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",

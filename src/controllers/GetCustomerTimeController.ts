@@ -5,7 +5,7 @@ import { GetCustomerTimeService } from "../services/GetCustomerTimeService";
 class GetCustomerTimeController{
     async handle(req: Request, res: Response){
         
-        const clientId= +req.params.clientId
+        const clientId = req.params.clientId as string
 
         const {quantityInCart} = req.body
 
