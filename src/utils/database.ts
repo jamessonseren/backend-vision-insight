@@ -18,7 +18,7 @@ export const initialTime: Date = new Date(0);
 export const finalTime: Date = new Date(0);
 
 
-export const initialSituation: ICliente["situation"]["status"] = "EmAberto";
+export const initialSituation: ICliente["situation"]["status"] = "Pendente";
 export const filaId: ICliente["filaId"] = ""
 
 export let client: ICliente[]= [

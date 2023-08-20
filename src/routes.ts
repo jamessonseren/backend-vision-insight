@@ -5,6 +5,8 @@ import { UpdateCustomerSituationController } from "./controllers/UpdateCustomerS
 import { ListClientsController } from "./controllers/ListClientsController"
 import { CompleteClientPurchaseController } from "./controllers/CompleteClientPurchaseController"
 import { CreateClientController } from "./controllers/CreateClientController"
+import { ListLineController } from "./controllers/ListLineController"
+import { GetClientController } from "./controllers/GetClienteController"
 
 const router = Router()
 
@@ -16,6 +18,8 @@ router.put("/complete-purchase", new CompleteClientPurchaseController().handle)
 
 router.post('/new-client', new CreateClientController().handle)
 
-// router.put('/client-line', new CalculateClientLineController().handle)
+router.get('/list-lines', new ListLineController().handle)
+
+router.get('/client-details', new GetClientController().handle)
 
 export {router}

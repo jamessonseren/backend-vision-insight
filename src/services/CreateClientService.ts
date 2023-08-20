@@ -1,4 +1,4 @@
-import { client } from "../utils/database"
+import { client, filaId } from "../utils/database"
 
 
 class CreateClientService{
@@ -9,11 +9,11 @@ class CreateClientService{
             estimatedItems,
             position:1,
             situation:{
-                status: "EmAberto"
+                status: "Pendente"
             },
             initialTime,
             finalTime,
-            filaId:""
+            filaId:filaId
 
         })
 

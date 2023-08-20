@@ -1,4 +1,4 @@
-import { caixa, client } from "../utils/database"
+import { caixa, client, fila } from "../utils/database"
 
 class CompleteClientPurchaseService{
     async execute(clientId: string){
@@ -14,6 +14,8 @@ class CompleteClientPurchaseService{
 
             if(updateStatus === "Finalizado"){
                 getClient.filaId = ""
+                
+                
             }
 
     
@@ -25,9 +27,7 @@ class CompleteClientPurchaseService{
                 item.filaId === clientId
             })
 
-            
-
-
+        
             return getClient
         }
     }
