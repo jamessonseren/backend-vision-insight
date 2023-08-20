@@ -6,14 +6,15 @@ class CompleteClientPurchaseService{
 
         if(getClient){
             let clientStatus = getClient.situation.status
-            if(clientStatus === "Finalizado"){
-                throw new Error("Cliente já finalizou a compra")
-
-            }else if(clientStatus === "pendente"){
-                throw new Error("Cliente ainda não incializou a compra")
+            if(clientStatus !== "EmAndamento"){
+                throw new Error("Não é possível finalizar a compra do cliente")
             }
 
-            getClient.situation.status = "Finalizado"
+            const updateStatus = getClient.situation.status = "Finalizado"
+
+            if(updateStatus === "Finalizado"){
+                getClient.filaId = ""
+            }
 
     
             getClient.finalTime = new Date()
@@ -31,19 +32,7 @@ class CompleteClientPurchaseService{
         }
     }
 
-    // private async calculateTime(getClient: any){
-    //     let results: number;
-
-    //     let timeCalculation = (getClient.finalTime - getClient.initialTime)
-    //     let sameFila = client.map((item) => {
-    //         item.filaId === getClient.filaId
-    //     })
-
-    //     sameFila.forEach(item => {
-    //         results = (item.estimatedItems * timeCalculation) + results;
-            
-    //     })
-    // }
+    
 
     private async calculateTime(finalTime: Date, initialTime: Date){
         let timeCalculation = +finalTime - +initialTime
