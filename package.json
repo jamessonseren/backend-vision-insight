@@ -1,14 +1,17 @@
 {
   "name": "backend-vision-insight",
   "version": "1.0.0",
-  "main": "src/server.ts",
+  "main":"server.js",
   "repository": "https://github.com/jamessonseren/backend-vision-insight.git",
   "author": "Jamesson Seren de Arruda <jamesson.arruda@sga.pucminas.br>",
   "license": "MIT",
   "scripts": {
-    "start":"node src/server.ts",
+    "start":"node server.js",
     "dev": "ts-node-dev src/server.ts",
-    "build": "rimraf ./build && tsc"
+    "build": "npm install",
+    "cyclic:deploy": "cyclic deploy", 
+    "cyclic:configure": "cyclic configure", 
+    "cyclic:build": "npm run build && npm run test && npm run cyclic:deploy" 
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -23,3 +26,4 @@
     "moment": "^2.29.4"
   }
 }
+

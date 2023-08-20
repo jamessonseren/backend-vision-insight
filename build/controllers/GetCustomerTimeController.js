@@ -14,7 +14,7 @@ const GetCustomerTimeService_1 = require("../services/GetCustomerTimeService");
 class GetCustomerTimeController {
     handle(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const clientId = +req.params.clientId;
+            const clientId = req.params.clientId;
             const { quantityInCart } = req.body;
             const getCustomerTime = new GetCustomerTimeService_1.GetCustomerTimeService();
             const customerTime = yield getCustomerTime.execute({ quantityInCart, clientId });
