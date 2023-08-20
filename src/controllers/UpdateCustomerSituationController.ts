@@ -4,10 +4,11 @@ import { UpdateCustomerSituationService } from "../services/UpdateCustomerSituat
 class UpdateCustomerSituationController{
     async handle(req:Request, res: Response){
         const clientId = req.query.clientId as string
+        const situacao = req.query.situacao as string;
 
         const updateCustomerSituation = new UpdateCustomerSituationService()
 
-        const customer = await updateCustomerSituation.execute(clientId)
+        const customer = await updateCustomerSituation.execute(clientId, situacao)
 
         return res.json(customer)
     }
