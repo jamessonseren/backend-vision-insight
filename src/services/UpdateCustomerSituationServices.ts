@@ -4,7 +4,7 @@ class UpdateCustomerSituationService{
     async execute(clientId: string){
 
         const getCustomer = client.find(client => client.id === clientId)
-        console.log("getcustomer: ",getCustomer)
+       
         if(getCustomer){
             
             getCustomer.situation.status = "EmAndamento"

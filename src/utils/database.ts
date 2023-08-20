@@ -1,119 +1,135 @@
+//G1 = 15
+// G2 = 30
+// G3 = 60
 
 interface ICliente {
     id: string,
-    estimatedItems: string,
+    estimatedItems: number,
     position:number,
     situation:{
         status: "pendente" | "EmAndamento" | "Finalizado";
     },
     initialTime: Date,
-    finalTime: Date
+    finalTime: Date,
+    filaId: "fila1" | "fila2" | "fila3"
 }
-const initialTime: Date = new Date(0);
-const finalTime: Date = new Date(0);
+export const initialTime: Date = new Date(0);
+export const finalTime: Date = new Date(0);
 
 
-const initialSituation: ICliente["situation"]["status"] = "pendente";
+export const initialSituation: ICliente["situation"]["status"] = "pendente";
+export const filaId: ICliente["filaId"] = "fila1"
+
 export let client: ICliente[]= [
     {
         id:'1',
-        estimatedItems: "G2",
+        estimatedItems: 30,
         position: 1,
         situation: {
             status: "EmAndamento"
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'2',
-        estimatedItems: "G2",
+        estimatedItems: 30,
         position: 1,
         situation: {
             status: "EmAndamento"
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'3',
-        estimatedItems: "G1",
+        estimatedItems: 15,
         position: 1,
         situation: {
             status: "EmAndamento"
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'4',
-        estimatedItems: "G1",
+        estimatedItems: 15,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'5',
-        estimatedItems: "G1",
+        estimatedItems: 15,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'6',
-        estimatedItems: "G1",
+        estimatedItems: 15,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'7',
-        estimatedItems: "G1",
+        estimatedItems: 15,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'8',
-        estimatedItems: "G1",
+        estimatedItems: 20,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'9',
-        estimatedItems: "G1",
+        estimatedItems: 30,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
     {
         id:'10',
-        estimatedItems: "G1",
+        estimatedItems: 20,
         position: 1,
         situation: {
             status: initialSituation
         },
         initialTime: initialTime,
-        finalTime: finalTime
+        finalTime: finalTime,
+        filaId: filaId
     },
 ]
 
@@ -125,7 +141,9 @@ interface ICaixa {
 }
 const ClientId: string = "";
 
-const estimatedTime: string = " "
+const estimatedTime: string = ""
+const totalItems: string = ""
+
 export let caixa: ICaixa[] = [
     {
         id: "c1",
